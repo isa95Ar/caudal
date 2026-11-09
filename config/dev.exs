@@ -2,10 +2,11 @@ import Config
 
 # Configure your database
 config :caudal, Caudal.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "caudal_db",
+  password: "caudal_db_2026_learning_elixir",
   hostname: "localhost",
   database: "caudal_dev",
+  port: 5433,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
