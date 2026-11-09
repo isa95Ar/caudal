@@ -6,8 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :caudal, Caudal.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("POSTGRES_USER") || "caudal_db",
+  password: System.get_env("POSTGRES_PASSWORD") || "caudal_db_2026_learning_elixir",
   hostname: "localhost",
   port: 5433,
   database: "caudal_test#{System.get_env("MIX_TEST_PARTITION")}",

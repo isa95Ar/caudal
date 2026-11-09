@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :caudal, Caudal.Repo,
-  username: "caudal_db",
-  password: "caudal_db_2026_learning_elixir",
+  username: System.get_env("POSTGRES_USER") || "caudal_db",
+  password: System.get_env("POSTGRES_PASSWORD") || "caudal_db_2026_learning_elixir",
   hostname: "localhost",
   database: "caudal_dev",
   port: 5433,

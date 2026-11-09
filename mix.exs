@@ -27,7 +27,7 @@ defmodule Caudal.MixProject do
 
   def cli do
     [
-      preferred_envs: [precommit: :test]
+      preferred_envs: [precommit: :test, check: :test]
     ]
   end
 
